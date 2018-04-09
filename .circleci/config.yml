@@ -10,6 +10,10 @@ jobs:
     steps:
       - checkout
       - run: ls
+      - run:
+          name: Start Selenium
+          command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
+          background: true
       - run: composer install -n --prefer-dist
       - run: echo "A first hello"
       - run: php codecept.phar build
