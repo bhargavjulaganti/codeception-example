@@ -5,6 +5,8 @@ jobs:
     docker:
       - image: circleci/php:7.1.16
 
+    working_directory: '~/project'
+
     steps:
       - checkout
       - run: composer install -n --prefer-dist
