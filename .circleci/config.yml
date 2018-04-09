@@ -1,0 +1,16 @@
+
+version: 2
+jobs:
+  one:
+    docker:
+      - image: circleci/php:7.1.16
+
+    steps:
+      - checkout
+      - run: composer install -n --prefer-dist
+      - run: echo "A first hello"
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - one
