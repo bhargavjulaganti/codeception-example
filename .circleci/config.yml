@@ -9,6 +9,7 @@ jobs:
 
     steps:
       - checkout
+      - run: ls
       - run: composer install -n --prefer-dist
       - run: echo "A first hello"
       - run: php codeception-example/codecept.phar
