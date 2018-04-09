@@ -12,7 +12,7 @@ jobs:
       - run: ls
       - run: composer install -n --prefer-dist
       - run: echo "A first hello"
-      - run: php codecept.phar
+      - run: php codecept.phar build
       - run: php codecept.phar run
 workflows:
   version: 2
