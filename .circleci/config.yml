@@ -3,14 +3,14 @@ version: 2
 jobs:
   one:
     docker:
-      - image: circleci/php:7.1.16
+      - image: circleci/php:7.1.16-browsers
 
     working_directory: '~/project'
 
     steps:
       - checkout
       - run: ls
-      - run: java -version
+      #- run: java -version
       - run:
           name: Download Selenium
           command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
