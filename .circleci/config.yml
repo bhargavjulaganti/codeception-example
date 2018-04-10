@@ -9,6 +9,7 @@ jobs:
 
     steps:
       - checkout
+      - run: mkdir test-reports
       - run: ls
       #- run: java -version
       - run:
